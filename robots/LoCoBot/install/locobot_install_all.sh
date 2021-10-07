@@ -291,7 +291,7 @@ if [ ! -d "$LOCOBOT_FOLDER/src/pyrobot/robots/LoCoBot/thirdparty" ]; then
 fi
 
 cd $LOCOBOT_FOLDER
-rosdep update 
+rosdep update --include-eol-distros
 rosdep install --from-paths src/pyrobot -i -y
 cd $LOCOBOT_FOLDER/src/pyrobot/robots/LoCoBot/install
 chmod +x install_orb_slam2.sh
